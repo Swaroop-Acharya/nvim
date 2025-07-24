@@ -1,11 +1,5 @@
 -- UI Customization
 local function setup_ui()
-  -- Set colorscheme
-  local ok = pcall(vim.cmd.colorscheme, "tokyonight")
-  if not ok then
-    vim.notify("tokyonight colorscheme not found!", vim.log.levels.WARN)
-  end
-
   -- Custom highlight groups
   local highlights = {
     -- Make the cursor line more subtle
