@@ -1,9 +1,9 @@
-require("lazy").setup({
+return {
   {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
-    lazy = false,         -- Load during startup
-    priority = 1000,      -- Load before all other plugins
+    lazy = false,
+    priority = 1000,
     config = function()
       require("github-theme").setup({
         options = {
@@ -15,9 +15,6 @@ require("lazy").setup({
           },
         },
       })
-
-      -- Apply colorscheme
-      vim.cmd("colorscheme github_dark_default")
     end,
   },
   {
@@ -37,4 +34,11 @@ require("lazy").setup({
     tag = "0.1.4",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
-})
+  {
+  "akinsho/toggleterm.nvim",
+  version = "*",
+  config = function()
+    require("toggleterm").setup()
+  end,
+  }
+}

@@ -1,8 +1,4 @@
-require "core.keymaps"
-require "core.options"
-require "core.ui"
-
--- Bootstrap lazy.nvim
+-- Bootstrap Lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -16,4 +12,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Load core configurations
+require("core.options")
+require("core.keymaps")
+require("core.ui").setup()
 
+
+-- Load plugins
+require("lazy").setup("plugins")
