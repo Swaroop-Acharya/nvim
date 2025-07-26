@@ -20,3 +20,4 @@ require("core.ui").setup()
 
 -- Load plugins
 require("lazy").setup("plugins")
+

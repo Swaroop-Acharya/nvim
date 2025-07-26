@@ -85,15 +85,13 @@ function M.setup()
   vim.opt.sidescrolloff = 8
   vim.opt.wrap = false
   vim.opt.linebreak = true
-  vim.opt.showbreak = "↪ "
   vim.opt.list = true
   vim.opt.listchars = {
     tab = "→ ",
     extends = "⟩",
     precedes = "⟨",
     trail = "·",
-    nbsp = "␣",
-    eol = "↲",
+    nbsp = "␣"
   }
   vim.opt.fillchars = {
     fold = " ",

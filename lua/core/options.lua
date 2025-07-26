@@ -4,8 +4,8 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- UI Options
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 3 
+vim.opt.shiftwidth = 3 
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
@@ -15,20 +15,12 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.wrap = false
 vim.opt.linebreak = true
-vim.opt.showbreak = "↪ "
 vim.opt.list = true
-vim.opt.listchars = {
-  tab = "→ ",
-  extends = "⟩",
-  precedes = "⟨",
-  trail = "·",
-  nbsp = "␣",
-  eol = "↲",
-}
+
 
 -- Editing Options
 vim.opt.expandtab = true
-vim.opt.tabstop = 2
+vim.opt.tabstop = 3 
 vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.autoindent = true

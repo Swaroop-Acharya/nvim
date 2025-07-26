@@ -1,21 +1,16 @@
 return {
   {
-    "projekt0n/github-nvim-theme",
-    name = "github-theme",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("github-theme").setup({
-        options = {
-          styles = {
-            comments = "italic",
-            functions = "bold",
-            keywords = "italic",
-            types = "italic,bold",
-          },
-        },
-      })
-    end,
+  'projekt0n/github-nvim-theme',
+  name = 'github-theme',
+  lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  priority = 1000, -- make sure to load this before all the other start plugins
+  config = function()
+    require('github-theme').setup({
+      -- ...
+    })
+
+    vim.cmd('colorscheme github_dark')
+  end,
   },
   {
     "nvim-tree/nvim-tree.lua",
@@ -28,6 +23,14 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    config = function(){
+      local configs = require("nvim-treesitter.configs")
+      configs.setup({
+       ensure_installed = {"lua","html","javascript","java"},
+       highlight = { enable = true},
+       indent = {enable =true},
+      })
+    }
   },
   {
     "nvim-telescope/telescope.nvim",
