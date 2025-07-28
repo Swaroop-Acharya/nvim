@@ -174,12 +174,13 @@ vim.api.nvim_create_autocmd("User", {
     map("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find Buffers", noremap = true, silent = true })
     map("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Help Tags", noremap = true, silent = true })
     map("n", "<leader>fr", ":Telescope oldfiles<CR>", { desc = "Recent Files", noremap = true, silent = true })
+   
+    -- Neo-tree
+    map("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle File Explorer", noremap = true, silent = true })
+    map("n", "<leader>o", ":Neotree focus<CR>", { desc = "Focus File Explorer", noremap = true, silent = true })
+  
 
-    -- NvimTree
-    map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer", noremap = true, silent = true })
-    map("n", "<leader>o", ":NvimTreeFocus<CR>", { desc = "Focus File Explorer", noremap = true, silent = true })
-
-     -- Git
+    -- Git
     map("n", "<leader>gg", ":LazyGit<CR>", { desc = "LazyGit", noremap = true, silent = true })
     map("n", "<leader>gb", ":GitBlameToggle<CR>", { desc = "Toggle Git Blame", noremap = true, silent = true })
 
