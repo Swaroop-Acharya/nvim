@@ -51,4 +51,6 @@ G to go to the end of the file
 % jump to matching ({[]})
 
 
-  Move line up and down with ALT + (j/k) in normal and visual mode
+Move line up and down with ALT + (j/k) in normal and visual mode
+
+h vim.lsp.buf 
