@@ -22,8 +22,7 @@ return {
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      local lspconfig = require("lspconfig")
-      lspconfig.gopls.setup({
+      vim.lsp.config("gopls",{
         capabilities = capabilities,
         settings = {
           gopls = {
@@ -36,17 +35,25 @@ return {
           },
         },
       })
-      lspconfig.ts_ls.setup({
+      vim.lsp.config("ts_ls",{
         capabilities = capabilities,
       })
-      lspconfig.solargraph.setup({
+      vim.lsp.config("solargraph",{
         capabilities = capabilities,
       })
-      lspconfig.html.setup({
+      vim.lsp.config("html",{
         capabilities = capabilities,
       })
-      lspconfig.lua_ls.setup({
+      vim.lsp.config("lua_ls",{
         capabilities = capabilities,
+      })
+
+      vim.lsp.enable({
+        "gopls",
+        "ts_ls",
+        "html",
+        "lua_ls",
+        "solargraph",
       })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
